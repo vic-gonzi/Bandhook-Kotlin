@@ -13,12 +13,17 @@ private const val priorityJobQueueVersion = "2.0.1"
 
 // Unit tests
 private const val mockitoVersion = "2.13.0"
+private const val junitPlatformVersion = "1.0.2"
+private const val androidJunit5Version = "1.0.22"
+private const val spekVersion = "1.1.5"
 
 object Config {
 
     object BuildPlugins {
         val androidGradle = "com.android.tools.build:gradle:$androidGradleVersion"
         val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        val junitGradlePlugin =  "org.junit.platform:junit-platform-gradle-plugin:$junitPlatformVersion"
+        val androidJunit5GradlePlugin =  "de.mannodermaus.gradle.plugins:android-junit5:$androidJunit5Version"
     }
 
     object Android {
@@ -62,6 +67,12 @@ object Config {
         val dexmaker = "com.google.dexmaker:dexmaker:1.2"
         val dexmaker_mockito = "com.google.dexmaker:dexmaker-mockito:1.2"
         val annotations = "com.android.support:support-annotations:$supportVersion"
-        val espresso = "com.android.support.test.espresso:espresso-core:2.2.2"
+        val kotlinReflect =  "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
+        val junitEngine = "org.junit.platform:junit-platform-engine:$junitPlatformVersion"
+        val junitRunner = "org.junit.platform:junit-platform-runner:$junitPlatformVersion"
+        val junitJupiter = "org.junit.jupiter:junit-jupiter-api:5.0.2"
+        val spek = "org.jetbrains.spek:spek-api:$spekVersion"
+        val spekRunner = "org.jetbrains.spek:spek-junit-platform-engine:$spekVersion"
+        val espresso = "com.android.support.test.espresso:espresso-core:3.0.1"
     }
 }

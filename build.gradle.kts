@@ -28,6 +28,8 @@ buildscript {
     dependencies {
         classpath(Config.BuildPlugins.androidGradle)
         classpath(Config.BuildPlugins.kotlinGradlePlugin)
+        classpath(Config.BuildPlugins.junitGradlePlugin)
+        classpath(Config.BuildPlugins.androidJunit5GradlePlugin)
     }
 }
 

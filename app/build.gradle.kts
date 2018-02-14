@@ -23,6 +23,8 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
+    id("de.mannodermaus.android-junit5")
+
 }
 
 android {
@@ -44,6 +46,10 @@ android {
             isMinifyEnabled = false
             proguardFiles("proguard-rules.pro")
         }
+    }
+
+    sourceSets {
+        getByName("test").java.srcDirs("src/test/kotlin")
     }
 }
 
@@ -72,6 +78,8 @@ dependencies {
 
     testCompile(Config.TestLibs.junit)
     testCompile(Config.TestLibs.mockito)
+    testCompile(Config.TestLibs.spek)
+    testCompile(Config.TestLibs.spekRunner)
 
     androidTestCompile(Config.TestLibs.mockito)
     androidTestCompile(Config.TestLibs.dexmaker)
